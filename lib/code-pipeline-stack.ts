@@ -2,9 +2,14 @@ import cdk = require('@aws-cdk/core');
 import codebuild = require('@aws-cdk/aws-codebuild');
 import codepipeline = require('@aws-cdk/aws-codepipeline');
 import codepipeline_actions = require('@aws-cdk/aws-codepipeline-actions');
+import lambda = require("@aws-cdk/aws-lambda");
+
+export interface CodePipelineStackProps extends cdk.StackProps {
+  lambdaCode: lambda.CfnParametersCode
+}
 
 export class CodePipelineStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.Construct, id: string, props: CodePipelineStackProps) {
     super(scope, id, props);
 
     const sourceOutput = new codepipeline.Artifact();
@@ -17,7 +22,7 @@ export class CodePipelineStack extends cdk.Stack {
       trigger: codepipeline_actions.GitHubTrigger.POLL
     });
 
-    const project = new codebuild.PipelineProject(this, 'CdkBuildProject', {
+    const cdkBuildProject = new codebuild.PipelineProject(this, 'CdkBuildProject', {
       environment: {
         buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_8_11_0
       },
@@ -25,9 +30,7 @@ export class CodePipelineStack extends cdk.Stack {
         version: '0.2',
         phases: {
           install: {
-            commands: [
-              'npm install',
-            ]
+            commands: 'npm install'
           },
           build: {
             commands: [
@@ -38,26 +41,57 @@ export class CodePipelineStack extends cdk.Stack {
         },
         artifacts: {
           'base-directory': 'build',
-          files: [
-            '**/*'
-          ]
+          files: 'MyWidgetServiceStack.template.json'
         }
       })
     });
-
-    const buildOutput = new codepipeline.Artifact();
-    const buildAction = new codepipeline_actions.CodeBuildAction({
-      actionName: 'CodeBuild',
-      project,
+    const cdkBuildOutput = new codepipeline.Artifact();
+    const cdkBuildAction = new codepipeline_actions.CodeBuildAction({
+      actionName: 'CdkCodeBuild',
+      project: cdkBuildProject,
       input: sourceOutput,
-      outputs: [buildOutput]
+      outputs: [cdkBuildOutput]
+    });
+
+    const lambdaBuildProject = new codebuild.PipelineProject(this, 'LambdaBuildProject', {
+      environment: {
+        buildImage: codebuild.LinuxBuildImage.UBUNTU_14_04_NODEJS_8_11_0
+      },
+      buildSpec: codebuild.BuildSpec.fromObject({
+        version: '0.2',
+        phases: {
+          install: {
+            commands: 'cd resources'
+          },
+          build: {
+            commands: 'npm install'
+          }
+        },
+        artifacts: {
+          'base-directory': 'resources',
+          files: '**/*'
+        }
+      })
+    });
+    const lambdaBuildOutput = new codepipeline.Artifact();
+    const lambdaBuildAction = new codepipeline_actions.CodeBuildAction({
+      actionName: 'LambdaCodeBuild',
+      project: lambdaBuildProject,
+      input: sourceOutput,
+      outputs: [lambdaBuildOutput]
     });
 
     const deployAction = new codepipeline_actions.CloudFormationCreateUpdateStackAction({
       actionName: 'CFN_Deploy',
       stackName: 'DevMyWidgetServiceStack',
-      templatePath: buildOutput.atPath('MyWidgetServiceStack.template.json'),
-      adminPermissions: true
+      templatePath: cdkBuildOutput.atPath('MyWidgetServiceStack.template.json'),
+      adminPermissions: true,
+      parameterOverrides: {
+        ...props.lambdaCode.assign(lambdaBuildOutput.s3Location),
+      },
+      extraInputs: [
+        lambdaBuildOutput,
+      ]
     });
 
     new codepipeline.Pipeline(this, 'MyPipeline', {
@@ -68,7 +102,7 @@ export class CodePipelineStack extends cdk.Stack {
         },
         {
           stageName: 'Build',
-          actions: [ buildAction ]
+          actions: [ cdkBuildAction, lambdaBuildAction ]
         },
         {
           stageName: 'Deploy',

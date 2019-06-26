@@ -4,14 +4,17 @@ import lambda = require("@aws-cdk/aws-lambda");
 import s3 = require("@aws-cdk/aws-s3");
 
 export class WidgetService extends cdk.Construct {
+  lambdaCode: lambda.CfnParametersCode;
+
   constructor(scope: cdk.Construct, id: string) {
     super(scope, id);
 
     const bucket = new s3.Bucket(this, "WidgetStore");
 
+    this.lambdaCode = lambda.Code.cfnParameters();
     const handler = new lambda.Function(this, "WidgetHandler", {
       runtime: lambda.Runtime.NODEJS_8_10, // So we can use async in widget.js
-      code: lambda.Code.asset("resources"),
+      code: this.lambdaCode,
       handler: "widgets.main",
       environment: {
         BUCKET: bucket.bucketName
