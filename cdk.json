@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/my_widget_service.ts"
+}
