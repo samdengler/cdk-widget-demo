@@ -54,7 +54,7 @@ export class CodePipelineStack extends cdk.Stack {
     const deployAction = new codepipeline_actions.CloudFormationCreateUpdateStackAction({
       actionName: 'CFN_Deploy',
       stackName: 'DevMyWidgetServiceStack',
-      templatePath: buildOutput.atPath('MyWidgetServiceStack.template.yaml'),
+      templatePath: buildOutput.atPath('MyWidgetServiceStack.template.json'),
       adminPermissions: true
     });
 
