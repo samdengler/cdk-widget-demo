@@ -1,0 +1,884 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "MyWidgetServiceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "MyWidgetServiceStack.template.json"
+      },
+      "metadata": {
+        "/MyWidgetServiceStack/Widgets/WidgetStore/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetStore0ED7FDB7",
+            "trace": [
+              "new Bucket (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:894:22)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:10:20)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerServiceRole8C2B589C",
+            "trace": [
+              "new Role (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/role.ts:212:18)",
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:404:31)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerServiceRoleDefaultPolicyA8E097C8",
+            "trace": [
+              "new Policy (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/policy.ts:102:22)",
+              "Role.addToPolicy (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/role.ts:251:28)",
+              "Function.addToPrincipal (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/grant.ts:132:61)",
+              "Function.addToPrincipalOrResource (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/grant.ts:102:26)",
+              "Bucket.grant (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:523:23)",
+              "Bucket.grantReadWrite (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:461:17)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:21:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandler1BC9DB34",
+            "trace": [
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:421:35)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/Code": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.47986e4808515f325277f5e3f04d762df06a2067292d893aafd623353cfc125c",
+              "id": "MyWidgetServiceStackWidgetsWidgetHandlerCode0A100CA2",
+              "packaging": "zip",
+              "sourceHash": "47986e4808515f325277f5e3f04d762df06a2067292d893aafd623353cfc125c",
+              "s3BucketParameter": "WidgetsWidgetHandlerCodeS3Bucket28C94536",
+              "s3KeyParameter": "WidgetsWidgetHandlerCodeS3VersionKey85CF5B56",
+              "artifactHashParameter": "WidgetsWidgetHandlerCodeArtifactHash873DDB1F"
+            },
+            "trace": [
+              "new Asset (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:142:15)",
+              "AssetCode.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/code.ts:144:20)",
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:450:16)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/Code/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerCodeS3Bucket28C94536",
+            "trace": [
+              "new Asset (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:101:25)",
+              "AssetCode.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/code.ts:144:20)",
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:450:16)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/Code/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerCodeS3VersionKey85CF5B56",
+            "trace": [
+              "new Asset (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:106:22)",
+              "AssetCode.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/code.ts:144:20)",
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:450:16)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/Code/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerCodeArtifactHash873DDB1F",
+            "trace": [
+              "new Asset (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:111:23)",
+              "AssetCode.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/code.ts:144:20)",
+              "new Function (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function.ts:450:16)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:12:21)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionGET23A488B4",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:60:18)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "RootResource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:32:14)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.Test.GET..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionTestGET0DECDD4D",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:67:20)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "RootResource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:32:14)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.POST..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionPOSTid61635725",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:60:18)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:45:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.Test.POST..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionTestPOSTidDBEBA24D",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:67:20)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:45:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.GET..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionGETidBB08303D",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:60:18)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:46:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.Test.GET..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionTestGETidB009EEB9",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:67:20)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:46:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.DELETE..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionDELETEid82AE0CD2",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:60:18)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:47:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/WidgetHandler/ApiPermission.Test.DELETE..{id}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetsWidgetHandlerApiPermissionTestDELETEid8778810D",
+            "trace": [
+              "Function.addPermission (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:171:5)",
+              "LambdaIntegration.bind (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:67:20)",
+              "Method.renderIntegration (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:177:17)",
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:120:25)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:47:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Widgetswidgetsapi72353315",
+            "trace": [
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:205:22)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiDeployment406A9BD6d10f421dc04aaf712daa863143f990e7",
+            "trace": [
+              "new Deployment (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:69:21)",
+              "RestApi.configureDeployment (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:325:32)",
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:220:10)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiDeploymentStageprod0D8CD1B7",
+            "trace": [
+              "new Stage (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:186:22)",
+              "RestApi.configureDeployment (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:335:30)",
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:220:10)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiEndpoint5B785C68",
+            "trace": [
+              "RestApi.configureDeployment (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:340:7)",
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:220:10)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiCloudWatchRole8C2A5801",
+            "trace": [
+              "new Role (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-iam/lib/role.ts:212:18)",
+              "RestApi.configureCloudWatchRole (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:349:18)",
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:224:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiAccountDA847A77",
+            "trace": [
+              "RestApi.configureCloudWatchRole (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:354:22)",
+              "new RestApi (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:224:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:23:17)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Default/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiGET2086C825",
+            "trace": [
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:124:22)",
+              "RootResource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:32:14)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Default/{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiidAA19CFA8",
+            "trace": [
+              "new Resource (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:212:22)",
+              "RootResource.addResource (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:136:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:34:29)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Default/{id}/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiidPOST60B9DB49",
+            "trace": [
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:124:22)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:45:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Default/{id}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiidGETABE1C648",
+            "trace": [
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:124:22)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:46:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ],
+        "/MyWidgetServiceStack/Widgets/widgets-api/Default/{id}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WidgetswidgetsapiidDELETEE81619C6",
+            "trace": [
+              "new Method (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:124:22)",
+              "Resource.addMethod (/private/tmp/MyWidgetService/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:140:12)",
+              "new WidgetService (/private/tmp/MyWidgetService/lib/widget_service.ts:47:12)",
+              "new MyWidgetServiceStack (/private/tmp/MyWidgetService/lib/my_widget_service-stack.ts:8:5)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/bin/my_widget_service.ts:7:1)",
+              "Module._compile (module.js:653:30)",
+              "Module.m._compile (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (module.js:664:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (/private/tmp/MyWidgetService/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "Object.<anonymous> (/private/tmp/MyWidgetService/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "findNodeScript.then.existing (/Users/fsd/.nvm/versions/node/v8.12.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14)",
+              "<anonymous>"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "0.36.0",
+      "@aws-cdk/cx-api": "0.36.0",
+      "@aws-cdk/aws-apigateway": "0.36.0",
+      "@aws-cdk/aws-iam": "0.36.0",
+      "@aws-cdk/region-info": "0.36.0",
+      "@aws-cdk/aws-lambda": "0.36.0",
+      "@aws-cdk/aws-cloudwatch": "0.36.0",
+      "@aws-cdk/aws-ec2": "0.36.0",
+      "@aws-cdk/aws-ssm": "0.36.0",
+      "@aws-cdk/aws-sqs": "0.36.0",
+      "@aws-cdk/aws-kms": "0.36.0",
+      "@aws-cdk/aws-s3-assets": "0.36.0",
+      "@aws-cdk/assets": "0.36.0",
+      "@aws-cdk/aws-s3": "0.36.0",
+      "@aws-cdk/aws-events": "0.36.0",
+      "jsii-runtime": "node.js/v8.12.0"
+    }
+  }
+}
