@@ -38,7 +38,9 @@ export class CodePipelineStack extends cdk.Stack {
         },
         artifacts: {
           'base-directory': 'build',
-          files: 'MyWidgetServiceStack.template.json',
+          files: [
+            '**/*'
+          ]
         }
       })
     });
