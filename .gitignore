@@ -3,6 +3,7 @@ lib/*.d.ts
 bin/*.js
 bin/*.d.ts
 node_modules
+build
 
 # CDK asset staging directory
 .cdk.staging

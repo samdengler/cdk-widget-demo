@@ -32,12 +32,13 @@ export class CodePipelineStack extends cdk.Stack {
           build: {
             commands: [
               'npm run build',
-              'npm run cdk synth MyWidgetServiceStack -- -o .',
+              'npm run cdk synth MyWidgetServiceStack -- -o build',
             ]
           }
         },
         artifacts: {
-          files: 'MyWidgetServiceStack.template.yaml',
+          'base-directory': 'build',
+          files: 'MyWidgetServiceStack.template.json',
         }
       })
     });
